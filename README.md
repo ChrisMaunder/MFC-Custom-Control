@@ -4,11 +4,11 @@ An introduction to creating custom controls using MFC
 
 
 
-![Sample Image - CustomControl.jpg](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/CustomControl.jpg)
+![Sample Image - CustomControl.jpg](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/customcontrol.jpg)
 
 ## Introduction
 
-In a [previous article](http://www.codeproject.com/miscctrl/subclassdemo.asp)
+In a [previous article](https://github.com/ChrisMaunder/subclassdemo)
 I demonstrated subclassing a windows common control in order to modify its behaviour or
 extend its functionality. Sometimes you can only push the windows common controls so far.
 An example I came across was the common issue of needing a grid control to display and
@@ -37,7 +37,7 @@ bitmaps, and we'll call this class `CBitmapViewer`. Obviously there is already
 the `CStatic` class that already displays bitmaps, but the example is only meant 
 to demonstrate the possibilities available to the adventurous programmer.
 
-![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/CustomControl3.gif) 
+![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/customcontrol3.gif) 
 
 To your class you should add handlers for the `WM_PAINT` and `WM_ERASEBKGND`
 messages. I've also added an override for `PreSubclassWindow` in case you wish to
@@ -45,7 +45,7 @@ perform any initialisation that requires the window to have been created. See my
 [previous article](http://www.codeproject.com/miscctrl/subclassdemo.asp) for a discussion
 of  `PreSubclassWindow`.
 
-![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/CustomControl4.gif) 
+![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/customcontrol4.gif) 
 
 The aim of this control is to display bitmaps, so we'll a method to set the bitmap and call it
 `SetBitmap`. We're not only talented, us programmers, but extremely imaginative as well.
@@ -215,11 +215,11 @@ BOOL CBitmapViewer::Create(CWnd* pParentWnd, const RECT& rect, UINT nID, DWORD d
 To use the custom control in a dialog resource, simply create a custom control on the dialog
 resource as you would any other control
 
-![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/CustomControl1.gif)
+![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/customcontrol1.gif)
 
 and then in the control's properties, specify the class name as "MFCBitmapViewerCtrl"
 
-![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/CustomControl2.gif)
+![](https://raw.githubusercontent.com/ChrisMaunder/customcontrol/master/docs/assets/customcontrol2.gif)
 
 The final step is to link up a member variable with the control. Simply declare an object
 of type  `CBitmapViewer` in your dialog class (say, *m\_Viewer*) and in your
